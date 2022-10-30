@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boton9 = findViewById(R.id.boton_9);
         boton0 = findViewById(R.id.boton_0);
         botonC = findViewById(R.id.boton_C);
-        botonAC = findViewById(R.id.boton_0);
+        botonAC = findViewById(R.id.boton_AC);
         botonP = findViewById(R.id.boton_punto);
         botonI = findViewById(R.id.boton_igual);
         botonR = findViewById(R.id.boton_restar);
@@ -75,6 +75,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String texto;
         texto = boton.getText().toString();
-        this.expresion.setText(texto);
+
+        if (texto == "C")
+        {
+            texto = "0";
+            this.expresion.setText(texto);
+        }else
+        {
+            while(texto != null){
+
+            }
+            this.expresion.setText(texto);
+        }
     }
 }
